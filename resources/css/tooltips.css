@@ -1,0 +1,44 @@
+/* Estilo base para los tooltips */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: underline;
+    color: #007bff;
+}
+
+/* El contenedor del tooltip, oculto por defecto */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Coloca el tooltip arriba del elemento */
+    left: 50%;
+    margin-left: -60px; /* Ajusta el tooltip para que se centre */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Muestra el tooltip cuando se pasa el mouse por encima */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Opcional: Puedes añadir efectos de transición o posiciones adicionales */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
